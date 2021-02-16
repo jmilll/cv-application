@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ClassClick from "./components/ClassClick";
 import Education from "./components/Education";
 import Overview from './components/Overview';
 
@@ -42,7 +43,7 @@ class App extends Component {
 
     return (
       <div>
-
+        <ClassClick />
         
         <Education />
 

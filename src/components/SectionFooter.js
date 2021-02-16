@@ -1,10 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 const SectionFooter = () => {
 
+    function addClick() {
+        console.log('add')
+    };
+
     return (
         <div className='section-footer'>
-            <button className='add-btn'>Add</button>
+            <button 
+                className='add-btn'
+                onClick={addClick}
+            >Add</button>
         </div>
     )
 
