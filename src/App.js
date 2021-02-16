@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Education from "./components/Education";
 import Overview from './components/Overview';
 
 class App extends Component {
@@ -41,6 +42,11 @@ class App extends Component {
 
     return (
       <div>
+
+        
+        <Education />
+
+        <h1 />
         <form onSubmit={this.onSubmitTask}>
           <label htmlFor="taskInput">Enter task</label>
 
