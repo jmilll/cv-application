@@ -31,7 +31,7 @@ class FormEducation extends Component {
         e.preventDefault();
 
         this.setState({
-            cards: this.state.cards.concat(this.state.task), 
+            cards: this.state.cards.concat(this.state.card), 
             card: "",
         });
 
@@ -48,7 +48,6 @@ class FormEducation extends Component {
     render() {
 
 
-
         return (
             <form 
                 className='education-form hidden'
@@ -58,8 +57,9 @@ class FormEducation extends Component {
                 <div className='form-section'>
                     <label htmlFor='school-input'>School</label>
                     <input 
-                        onChange={this.handleChange}
-                        value={this.state.school}
+                        //onChange={this.handleChange}
+                        //value={this.state.school}
+
                         type='text'
                         id='school-input' 
                         placeholder='Enter School'
@@ -70,8 +70,8 @@ class FormEducation extends Component {
                 <div className='form-section'>
                     <label htmlFor='degree-input'>Degree</label>
                     <input 
-                        onChange={this.handleChange}
-                        value={this.state.degree}
+                        //onChange={this.handleChange}
+                        //value={this.state.degree}
 
                         type='text'
                         id='degree-input'

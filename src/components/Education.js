@@ -3,6 +3,7 @@ import uniqid from "uniqid";
 import SectionHeader from './SectionHeader';
 import SectionFooter from './SectionFooter';
 import FormEducation from './FormEducation';
+import FormEducation2 from './FormEducation2';
 import CardItem from './CardItem';
 
 class Education extends Component {
@@ -10,14 +11,17 @@ class Education extends Component {
         super(props)
     
         this.state = {
-            id: uniqid(),
-            school: '',
-            degree: '',
-            from: '',
-            to: '',
-            additional: '',
-            cards: [],
-            card: '',
+            info: {
+                id: uniqid(),
+                school: '',
+                degree: '',
+                from: '',
+                to: '',
+                additional: '',
+                cards: [],
+                card: '',
+            }
+
 
         }
     }
@@ -26,20 +30,20 @@ class Education extends Component {
 
     render() {
 
-        const displayCard = this.state.cards.map((card) => {
-            return <CardItem section='education' />
-            }
-        )
+        // const displayCard = this.state.cards.map((card) => {
+        //     return <CardItem section='education' />
+        //     }
+        // )
 
-        // const displayCard = 
-        //     <CardItem 
-        //         section='education' 
-        //         name='edu test' 
-        //         school='Arizona State'
-        //         degree='Graphic Info'
-        //         from='2010'
-        //         to='2011'
-        //     />
+        const displayCard = 
+            <CardItem 
+                section='education' 
+                name='edu test' 
+                school='Arizona State'
+                degree='Graphic Info'
+                from='2010'
+                to='2011'
+            />
 
 
         return (
