@@ -12,6 +12,8 @@ class FormEducation extends Component {
             from: '',
             to: '',
             additional: '',
+            cards: [],
+            card: '',
 
         }
     }
@@ -19,22 +21,21 @@ class FormEducation extends Component {
     handleChange = (e) => {
         this.setState({
             
-          //task: e.target.value,
+          card: e.target.value,
+
         })
-        console.log('handle change')
+        console.log('handle change' + this.state.card)
       }
 
     onSubmitTask = (e) => {
         e.preventDefault();
 
-        //console.log("before " + this.state.task)
-
         this.setState({
-            //tasks: this.state.tasks.concat(this.state.task), 
-            //task: "",
+            cards: this.state.cards.concat(this.state.task), 
+            card: "",
         });
 
-        console.log('submit task')
+        console.log("after " + this.state.card)
         //console.log("after " + this.state.task)
     }
 
@@ -43,7 +44,11 @@ class FormEducation extends Component {
     //{tasks.map((task) => {
         //return <li key={uniqid()}>{task}</li>
 
+        
     render() {
+
+
+
         return (
             <form 
                 className='education-form hidden'
@@ -53,8 +58,8 @@ class FormEducation extends Component {
                 <div className='form-section'>
                     <label htmlFor='school-input'>School</label>
                     <input 
-                        //onChange={this.handleChange}
-                        //value={this.state.school}
+                        onChange={this.handleChange}
+                        value={this.state.school}
                         type='text'
                         id='school-input' 
                         placeholder='Enter School'
@@ -65,8 +70,9 @@ class FormEducation extends Component {
                 <div className='form-section'>
                     <label htmlFor='degree-input'>Degree</label>
                     <input 
-                        //onChange={this.handleChange}
-                        //value={this.state.degree}
+                        onChange={this.handleChange}
+                        value={this.state.degree}
+
                         type='text'
                         id='degree-input'
                         placeholder='Enter Degree'
@@ -79,6 +85,7 @@ class FormEducation extends Component {
                     <input 
                         //onChange={this.handleChange}
                         //value={this.state.from}
+
                         //type="month"
                         type='number'
                         min='1940'
@@ -94,6 +101,7 @@ class FormEducation extends Component {
                     <input 
                         //onChange={this.handleChange}
                         //value={this.state.to}
+
                         //type="month"
                         type='number'
                         min='1940'
@@ -109,6 +117,7 @@ class FormEducation extends Component {
                     <textarea 
                         //onChange={this.handleChange}
                         //value={this.state.additional}
+
                         type='text'
                         id='school-add'
                         placeholder='Honors / Clubs / Acheivements'
