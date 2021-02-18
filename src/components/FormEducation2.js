@@ -8,41 +8,38 @@ import uniqid from "uniqid";
     //{tasks.map((task) => {
         //return <li key={uniqid()}>{task}</li>
 const FormEducation2 = (props) => {
-
-
-
-
-
-
-
     const { school, degree} = props;
+
+
 
     return (
         <form 
-        className='education-form hidden'
+        className='education-form2 hidden'
         onSubmit={this.onSubmitTask}
     >
 
         <div className='form-section'>
-            <label htmlFor='school-input'>School</label>
+            <label htmlFor='school'>School</label>
             <input 
-                //onChange={this.handleChange}
-                value={school}
+                
+                value={this.state.school}
+                onChange={this.handleChange}
+
                 type='text'
-                id='school-input' 
+                name='school'
                 placeholder='Enter School'
                 required
             />
         </div>
 
         <div className='form-section'>
-            <label htmlFor='degree-input'>Degree</label>
+            <label htmlFor='degree'>Degree</label>
             <input 
-                //onChange={this.handleChange}
-                value={degree}
+                onChange={this.handleChange}
+                value={this.state.degree}
 
                 type='text'
-                id='degree-input'
+                name='degree'
                 placeholder='Enter Degree'
                 required
             />
@@ -52,10 +49,11 @@ const FormEducation2 = (props) => {
             <label htmlFor='year-from'>From</label>
             <input 
                 //onChange={this.handleChange}
-                //value={info.from}
+                //value={this.state.from}
 
                 //type="month"
                 type='number'
+                name='from'
                 min='1940'
                 max='2100'
                 step='1'
@@ -68,10 +66,11 @@ const FormEducation2 = (props) => {
             <label htmlFor='year-to'>To</label>
             <input 
                 //onChange={this.handleChange}
-                //value={info.to}
+                //value={this.state.to}
 
                 //type="month"
                 type='number'
+                name='to'
                 min='1940'
                 max='2100'
                 step='1'
@@ -84,9 +83,10 @@ const FormEducation2 = (props) => {
             <label htmlFor='degree-input'>Additional</label>
             <textarea 
                 //onChange={this.handleChange}
-                //value={info.additional}
+                //value={this.state.additional}
 
                 type='text'
+                name='additional'
                 id='school-add'
                 placeholder='Honors / Clubs / Acheivements'
             />

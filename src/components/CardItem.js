@@ -5,7 +5,7 @@ const CardItem = (props) => {
 
     const { section, card } = props;
     //const cards = props;
-    console.log(card);
+    //console.log(card);
 
     if (props.section === 'education') {
         return (

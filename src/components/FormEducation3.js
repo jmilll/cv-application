@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import uniqid from "uniqid";
-
+import SectionHeader from './SectionHeader';
+import SectionFooter from './SectionFooter';
 import CardItem from './CardItem'
 
 class FormEducation extends Component {
@@ -99,10 +100,11 @@ class FormEducation extends Component {
         return (
         <div className='container education'>   
 
+            <SectionHeader name='Education'/>
 
             {renderCard}
 
-            <form className='education-form hidden'>
+            <form className='education-form hidden' onSubmit={this.onSubmitTask}>
                 {/*onSubmit={this.onSubmitTask}*/}
 
                 <div className='form-section'>
@@ -180,11 +182,12 @@ class FormEducation extends Component {
                 </div>
 
                 <div className='form-btns'>
-                    <button type='submit' className='submit-btn' onClick={this.onSubmitTask}>Add School</button>
+                    <button type='submit' className='submit-btn' >Add School</button>
                     <button type='cancel' className='cancel-btn' onClick={this.resetForm}>Cancel</button>
                 </div>
-
             </form>
+            
+            <SectionFooter />
 
         </div> 
         )

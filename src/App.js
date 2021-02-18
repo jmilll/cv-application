@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ClassClick from "./components/ClassClick";
 import Education from "./components/Education";
 import Overview from './components/Overview';
+import FormEducation3 from './components/FormEducation3'
 
 class App extends Component {
   constructor(props) {
@@ -14,6 +15,9 @@ class App extends Component {
   }
 
   handleChange = (e) => {
+    
+    console.log(e.target.value)
+
     this.setState({
       task: e.target.value,
     })
@@ -45,8 +49,9 @@ class App extends Component {
       <div>
         <ClassClick />
         
-        <Education />
-
+        {/*<Education />*/}
+        <FormEducation3 />
+        
         <h1 />
         <form onSubmit={this.onSubmitTask}>
           <label htmlFor="taskInput">Enter task</label>
@@ -56,6 +61,7 @@ class App extends Component {
             value={this.state.task}
             type="text" 
             id="taskInput" 
+            placeholder= 'place'
           />
 
           <button type="submit">Add Task</button>
