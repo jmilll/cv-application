@@ -3,6 +3,7 @@ import uniqid from "uniqid";
 import SectionHeader from './SectionHeader';
 import SectionFooter from './SectionFooter';
 import CardItem from './CardItem'
+import CardEditForm from './CardEditForm';
 
 class FormEducation extends Component {
     constructor(props) {
@@ -18,6 +19,7 @@ class FormEducation extends Component {
                 additional: '',
             },
             cards: [],
+            edit: [],
             // id: {uniqid},
             // school: '',
             // degree: '',
@@ -92,17 +94,21 @@ class FormEducation extends Component {
             return card.id === cardId
         })
         console.log(findCard)
-        this.setState({
-            eduObject: {
+
+        // this.setState({
+        //     eduObject: {
                 
-                school: findCard.school,
-                degree: findCard.degree,
-                from: findCard.from,
-                to: findCard.to,
-                additional: findCard.additional,
-            }
-        })
+        //         school: findCard.school,
+        //         degree: findCard.degree,
+        //         from: findCard.from,
+        //         to: findCard.to,
+        //         additional: findCard.additional,
+        //     }
+        // })
     }
+
+
+
 
     deleteCard = (uid) => {
         console.log('delete-card')
@@ -113,6 +119,12 @@ class FormEducation extends Component {
             cards: remainingCards
         })
     }
+
+
+    testFunction = () => {
+        console.log('test')
+    }
+
 
     render() {
         //const { cards } = this.state;
@@ -125,6 +137,8 @@ class FormEducation extends Component {
                     card={card}
                     editCard={this.editCard}
                     deleteCard={this.deleteCard}
+
+                    testFunction={this.testFunction}
                     />
         })
 

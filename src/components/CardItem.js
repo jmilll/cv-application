@@ -1,9 +1,14 @@
 import React from 'react'
 import uniqid from "uniqid";
+import CardEditForm from './CardEditForm'
 
 const CardItem = (props) => {
 
-    const { section, card, deleteCard, editCard } = props;
+    // testFunction2 = () => {
+    //     console.log('test function2 work')
+    // }
+
+    const { section, card, deleteCard, editCard , testFunction} = props;
     //const cards = props;
     //console.log(card);
 
@@ -44,6 +49,8 @@ const CardItem = (props) => {
 
                 <button type='button' onClick={() => editCard(card.id)}>Edit card</button>
                 <button type='button' onClick={() => deleteCard(card.id)}>Delete card</button>
+            
+                <CardEditForm card={card} testFunction={testFunction} />
             </div>
         )
 
