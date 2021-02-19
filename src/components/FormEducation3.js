@@ -85,15 +85,46 @@ class FormEducation extends Component {
             }
         })
     }
-        
+       
+    editCard = (cardId) => {
+        console.log('edit-card')
+        const findCard = this.state.cards.filter(card => {
+            return card.id === cardId
+        })
+        console.log(findCard)
+        this.setState({
+            eduObject: {
+                
+                school: findCard.school,
+                degree: findCard.degree,
+                from: findCard.from,
+                to: findCard.to,
+                additional: findCard.additional,
+            }
+        })
+    }
+
+    deleteCard = (uid) => {
+        console.log('delete-card')
+        const remainingCards = this.state.cards.filter(card => {
+            return card.id !== uid
+        })
+        this.setState({
+            cards: remainingCards
+        })
+    }
+
     render() {
         //const { cards } = this.state;
 
         const renderCard = this.state.cards.map((card) => {
             //console.log('rendercard')
             return <CardItem 
+                    key={card.id}
                     section='education2'
                     card={card}
+                    editCard={this.editCard}
+                    deleteCard={this.deleteCard}
                     />
         })
 

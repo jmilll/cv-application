@@ -3,7 +3,7 @@ import uniqid from "uniqid";
 
 const CardItem = (props) => {
 
-    const { section, card } = props;
+    const { section, card, deleteCard, editCard } = props;
     //const cards = props;
     //console.log(card);
 
@@ -40,6 +40,10 @@ const CardItem = (props) => {
                 <div className='additional edu'>
                     <p className='add-text'>{card.additional}</p>
                 </div>
+
+
+                <button type='button' onClick={() => editCard(card.id)}>Edit card</button>
+                <button type='button' onClick={() => deleteCard(card.id)}>Delete card</button>
             </div>
         )
 
