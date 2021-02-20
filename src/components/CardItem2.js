@@ -5,7 +5,7 @@ class CardItem2 extends Component {
     constructor(props) {
         super(props)
         this.testFunction = props.testFunction.bind(this)
-        this.editCard = props.editCard.bind(this)
+        //this.editCard = props.editCard.bind(this)
         this.deleteCard = props.deleteCard.bind(this)
         
         this.state = {

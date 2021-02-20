@@ -4,6 +4,9 @@ import Education from "./components/Education";
 import Overview from './components/Overview';
 import FormEducation3 from './components/FormEducation3'
 
+import './normalize.css';
+import './App.css';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -46,12 +49,12 @@ class App extends Component {
 
 
     return (
-      <div>
+      <div className='App'>
         <ClassClick />
         
-        {/*<Education />*/}
-        <FormEducation3 />
-        
+        <Education />
+        {/* <FormEducation3 /> */}
+
         <h1 />
         <form onSubmit={this.onSubmitTask}>
           <label htmlFor="taskInput">Enter task</label>
