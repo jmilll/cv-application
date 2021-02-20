@@ -1,0 +1,96 @@
+#root {
+    background: teal
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+}
+
+h4 {
+    margin: 0;
+    font-size: 1.4em;
+    margin: .4em 0;
+}
+
+h5 {
+    margin: 0;
+}
+
+.App {
+    margin: 2rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    background: white;
+    padding: 1rem;
+}
+
+.section-header {
+    border-top: 2px solid darkgray;
+    border-bottom: 2px solid darkgray;
+    margin-bottom: 1rem;
+}
+
+
+/* BUTTONS */
+.btn {
+
+}
+
+/* FORM CONTROLS */
+
+label {
+
+}
+
+input,textarea {
+    padding: .3em;
+
+    /*background: #f0f2f6; 
+    border: none;*/
+}
+
+.form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    
+}
+
+.form.hidden {
+    display: none;
+}
+
+.form-section {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+.form-btns{
+    margin-top: 1rem;
+}
+
+.h {
+    width: 47%;
+}
+
+
+
+/* CARD ITEM */
+
+.card-item {
+    
+}
