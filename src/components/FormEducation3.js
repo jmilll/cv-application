@@ -4,6 +4,7 @@ import SectionHeader from './SectionHeader';
 import SectionFooter from './SectionFooter';
 import CardItem from './CardItem'
 import CardEditForm from './CardEditForm';
+import CardItem2 from './CardItem2'
 
 class FormEducation extends Component {
     constructor(props) {
@@ -94,7 +95,8 @@ class FormEducation extends Component {
             return card.id === cardId
         })
         console.log(findCard)
-
+        console.log(Object.findCard.school)
+        const changeCard = console.log(findCard.school)
         // this.setState({
         //     eduObject: {
                 
@@ -128,7 +130,6 @@ class FormEducation extends Component {
 
     render() {
         //const { cards } = this.state;
-
         const renderCard = this.state.cards.map((card) => {
             //console.log('rendercard')
             return <CardItem 
@@ -142,12 +143,26 @@ class FormEducation extends Component {
                     />
         })
 
+        const renderCard2 = this.state.cards.map((card) => {
+            //console.log('rendercard')
+            return <CardItem2 
+                    key={card.id}
+                    section='education2'
+                    card={card}
+                    editCard={this.editCard}
+                    deleteCard={this.deleteCard}
+
+                    testFunction={this.testFunction}
+                    />
+        })
+
         return (
         <div className='container education'>   
 
+            {renderCard2}
             <SectionHeader name='Education'/>
 
-            {renderCard}
+            {/* {renderCard} */}
 
             <form className='education-form hidden' onSubmit={this.onSubmitTask}>
                 {/*onSubmit={this.onSubmitTask}*/}

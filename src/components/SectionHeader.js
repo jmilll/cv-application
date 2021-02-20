@@ -5,7 +5,7 @@ const SectionHeader = (props) => {
     return (
         <div className='section-header'id={props.name}>
             <h4>{props.name}</h4>
-            <button className='edit-btn'>Edit</button>
+            {/* <button className='edit-btn'>Edit</button> */}
         </div>
     )
 
