@@ -17,6 +17,8 @@ class CardItem2 extends Component {
                 to: props.card.to,
                 additional: props.card.additional,
             },
+            activeEditForm: false,
+            activeEditBtn: true,
         }
     }
 
@@ -42,11 +44,18 @@ class CardItem2 extends Component {
         })
     }
 
-
+    toggleEditForm = () => {
+        this.setState({
+            activeEditBtn: !this.state.activeEditBtn,
+            activeEditForm: !this.state.activeEditForm
+        })
+    }
 
     render() {
 
         //const { section, card, deleteCard, editCard , testFunction} = props;
+        const activeEditForm = this.state.activeEditForm ? 'card-edit' : 'card-edit hidden'
+        const activeEditBtn = this.state.activeEditBtn ? 'btn edit' : 'btn edit hidden'
 
         return (
 
@@ -67,8 +76,8 @@ class CardItem2 extends Component {
             </div>
 
 
-            <button type='button' onClick={() => this.editCard(this.state.newCard.id)}>Edit card</button>
-            <button type='button' onClick={() => this.deleteCard(this.state.newCard.id)}>Delete card</button>
+            <button className={activeEditBtn} type='button' onClick={() => this.toggleEditForm()}>Edit card</button>
+            <button className='btn delete' type='button' onClick={() => this.deleteCard(this.state.newCard.id)}>Delete card</button>
         
             </div>
 
@@ -76,7 +85,7 @@ class CardItem2 extends Component {
 
 
 
-            <form className='card-edit hidden' onSubmit={this.onSubmitTask2}>
+            <form className={activeEditForm} onSubmit={this.onSubmitTask2}>
                 <div className='form-section'>
                     {/* <label htmlFor='school'>SCHOOL EDIT</label> */}
                     <input 
@@ -152,7 +161,7 @@ class CardItem2 extends Component {
 
 
 
-                <button type='submit'>SAVE EDIT</button>
+                <button className='btn save' type='submit' onClick={() => this.toggleEditForm()}>Save Edit</button>
             </form>
         </section>
         )

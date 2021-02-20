@@ -20,7 +20,8 @@ class FormEducation extends Component {
                 additional: '',
             },
             cards: [],
-            edit: [],
+            activeForm: false,
+            activeBtn: true,
             // id: {uniqid},
             // school: '',
             // degree: '',
@@ -62,8 +63,10 @@ class FormEducation extends Component {
             
         });
 
+        //this.toggleForm()
         this.resetForm()
         console.log('submited')
+
         //console.log("after " + this.state.task)
     }
 
@@ -87,8 +90,16 @@ class FormEducation extends Component {
                 additional: '',
             }
         })
+        this.toggleForm()
     }
        
+    toggleForm = () => {
+        this.setState({
+            activeForm: !this.state.activeForm,
+            activeBtn: !this.state.activeBtn
+        })
+    }
+
     editCard = (cardId) => {
         console.log('edit-card')
         const findCard = this.state.cards.filter(card => {
@@ -130,18 +141,21 @@ class FormEducation extends Component {
 
     render() {
         //const { cards } = this.state;
-        const renderCard = this.state.cards.map((card) => {
-            //console.log('rendercard')
-            return <CardItem 
-                    key={card.id}
-                    section='education2'
-                    card={card}
-                    editCard={this.editCard}
-                    deleteCard={this.deleteCard}
+        // const renderCard = this.state.cards.map((card) => {
+        //     //console.log('rendercard')
+        //     return <CardItem 
+        //             key={card.id}
+        //             section='education2'
+        //             card={card}
+        //             editCard={this.editCard}
+        //             deleteCard={this.deleteCard}
 
-                    testFunction={this.testFunction}
-                    />
-        })
+        //             testFunction={this.testFunction}
+        //             />
+        // })
+
+        const activeForm = this.state.activeForm ? 'education-form' : 'education-form hidden';
+        const activeBtn = this.state.activeBtn ? 'add-btn' : 'add-btn hidden';
 
         const renderCard2 = this.state.cards.map((card) => {
             //console.log('rendercard')
@@ -164,7 +178,7 @@ class FormEducation extends Component {
 
             {/* {renderCard} */}
 
-            <form className='education-form hidden' onSubmit={this.onSubmitTask}>
+            <form className={activeForm} onSubmit={this.onSubmitTask}>
                 {/*onSubmit={this.onSubmitTask}*/}
 
                 <div className='form-section'>
@@ -247,7 +261,7 @@ class FormEducation extends Component {
                 </div>
             </form>
             
-            <SectionFooter />
+            <SectionFooter activeBtn={activeBtn} toggleForm={this.toggleForm}/>
 
         </div> 
         )

@@ -1,15 +1,18 @@
 import React from 'react'
 
-const SectionFooter = () => {
+const SectionFooter = (props) => {
+
+    const { activeBtn, toggleForm } = props;
 
     function addClick() {
-        console.log('add')
+        console.log('add + open form')
+        toggleForm()
     };
 
     return (
         <div className='section-footer'>
             <button 
-                className='add-btn'
+                className={activeBtn}
                 onClick={addClick}
             >Add</button>
         </div>
