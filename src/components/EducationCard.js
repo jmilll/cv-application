@@ -53,29 +53,31 @@ class EducationCard extends Component {
         //const { section, card, deleteCard, editCard , testFunction} = props;
         const activeEditForm = this.state.activeEditForm ? 'card-edit' : 'card-edit hidden'
         const activeEditBtn = this.state.activeEditBtn ? 'btn edit' : 'btn edit hidden'
+        const activecardItem = this.state.activeEditBtn ? 'card-item' : 'card-item hidden'
 
         return (
 
         // <React.Fragment></React.Fragment>
         <section className='card-container'>
-            <div className='card-item'>
-            <p className='hidden'>{this.state.newCard.id}</p>
+            <div className={activecardItem}>
+                <div className='card-info'>
+                <p className='hidden'>{this.state.newCard.id}</p>
 
-            <div className='school-info'>
-                <h5>{this.state.newCard.school}</h5>
-                <p className='degree'>{this.state.newCard.degree}</p>
+                <div className='school-info'>
+                    <h5>{this.state.newCard.school}</h5>
+                    <p className='degree'>{this.state.newCard.degree}</p>
+                </div>
+                <div className='years'>
+                    <p>{this.state.newCard.from} to {this.state.newCard.to}</p>
+                </div>
+                <div className='additional edu'>
+                    <p className='add-text'>{this.state.newCard.additional}</p>
+                </div>
             </div>
-            <div className='years'>
-                <p>{this.state.newCard.from} to {this.state.newCard.to}</p>
+            <div className='card-btns'>
+                <button className={activeEditBtn} type='button' onClick={() => this.toggleEditForm()}>Edit card</button>
+                <button className='btn delete' type='button' onClick={() => this.deleteCard(this.state.newCard.id)}>Delete card</button>
             </div>
-            <div className='additional edu'>
-                <p className='add-text'>{this.state.newCard.additional}</p>
-            </div>
-
-
-            <button className={activeEditBtn} type='button' onClick={() => this.toggleEditForm()}>Edit card</button>
-            <button className='btn delete' type='button' onClick={() => this.deleteCard(this.state.newCard.id)}>Delete card</button>
-        
             </div>
 
 
