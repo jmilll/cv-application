@@ -75,8 +75,8 @@ class EducationCard extends Component {
                 </div>
             </div>
             <div className='card-btns'>
-                <button className={activeEditBtn} type='button' onClick={() => this.toggleEditForm()}>Edit card</button>
-                <button className='btn delete' type='button' onClick={() => this.deleteCard(this.state.newCard.id)}>Delete card</button>
+                <button className={activeEditBtn} type='button' onClick={() => this.toggleEditForm()}>Edit</button>
+                <button className='btn delete' type='button' onClick={() => this.deleteCard(this.state.newCard.id)}>Delete</button>
             </div>
             </div>
 
