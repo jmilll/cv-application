@@ -6,6 +6,7 @@ import FormEducation3 from './components/FormEducation3'
 
 import './normalize.css';
 import './App.css';
+import PracticalExperience from "./components/PracticalExperience";
 
 class App extends Component {
   constructor(props) {
@@ -54,6 +55,8 @@ class App extends Component {
         
         <Education />
         {/* <FormEducation3 /> */}
+
+        <PracticalExperience />
 
         <h1 />
         <form onSubmit={this.onSubmitTask}>

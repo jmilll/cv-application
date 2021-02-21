@@ -112,6 +112,10 @@ input,textarea {
     width: 47%;
 }
 
+.hh {
+    width: 22%;
+}
+
 .btn.cancel {
     margin-left: 2em;
 }
@@ -143,11 +147,27 @@ input,textarea {
     margin-left: 2em;
 }
 
-.years {
-    margin-left: 2em;
+.location {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-left: 3em;
     font-size: .9em;
 }
-.degree {
+
+.city {
+    text-transform: capitalize;
+}
+
+.state {
+    text-transform: uppercase;
+}
+
+.years {
+    margin-left: 3em;
+    font-size: .9em;
+}
+
+.degree, .title {
     text-transform: capitalize;
     font-style: italic;
 }
