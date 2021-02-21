@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
 #root {
-    background: teal
+    background: teal;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -56,7 +59,13 @@ p {
 
 /* BUTTONS */
 .btn {
+    background: #c6d7d7;
+    font-size: .9em;
+    padding: .4em .8em;
+    border: none;
+    border-radius: 4px;
 
+    cursor: pointer;
 }
 
 /* FORM CONTROLS */
@@ -106,7 +115,7 @@ input,textarea {
 .card-item {
     display: flex;
     flex-flow: row nowrap;
-    margin-bottom: 2rem;
+    margin-bottom: .5rem;
     justify-content: space-between;
 }
 
@@ -126,10 +135,6 @@ input,textarea {
     margin-left: 2em;
 }
 
-.edit, .delete {
-
-}
-
 .years {
     margin-left: 2em;
     font-size: .9em;
@@ -140,10 +145,38 @@ input,textarea {
 }
 
 .additional {
-    margin: 1em 0;
+    margin: .5em 0;
     font-size: .9em;
+    width: 100%;
+}
+
+
+.btn.delete {
+    background: #ee6565;
+    margin-top: .3rem;
+}
+
+.delete, .edit {
+    font-size: .8em;
+    padding: .2em .6em;
 }
 
 /* edit card form */
 
+.card-edit {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
 
+.card-edit.hidden {
+    display: none;
+}
+
+.card-edit div.form-section {
+    margin-bottom: .5em;
+}
+
+.save {
+    margin: 1rem 0 2rem 0;
+}

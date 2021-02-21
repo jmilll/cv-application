@@ -124,7 +124,7 @@ class FormEducation extends Component {
     render() {
 
         const activeForm = this.state.activeForm ? 'form education' : 'form education hidden';
-        const activeBtn = this.state.activeBtn ? 'add-btn' : 'add-btn hidden';
+        const activeBtn = this.state.activeBtn ? 'btn add-edu' : 'btn add-edu hidden';
 
         const renderCard = this.state.cards.map((card) => {
             //console.log('rendercard')

@@ -85,7 +85,7 @@ class EducationCard extends Component {
 
 
             <form className={activeEditForm} onSubmit={this.onSubmitTask}>
-                <div className='form-section'>
+                <div className='form-section h'>
                     {/* <label htmlFor='school'>SCHOOL EDIT</label> */}
                     <input 
                         
@@ -98,21 +98,8 @@ class EducationCard extends Component {
                         required
                     />
                 </div>
-                <div className='form-section'>
-                    {/* <label htmlFor='degree'>DEGREE EDIT</label> */}
-                    <input 
-                        
-                        value={this.state.newCard.degree}
-                        onChange={this.handleChange}
 
-                        type='text'
-                        name='degree'
-                        placeholder='Edit Degree'
-                        required
-                    />
-                </div>
-
-                <div className='form-section'>
+                <div className='form-section h'>
                     {/* <label htmlFor='year-from'>From</label> */}
                     <input 
                         onChange={this.handleChange}
@@ -128,7 +115,21 @@ class EducationCard extends Component {
                     />
                 </div>
 
-                <div className='form-section'>
+                <div className='form-section h'>
+                    {/* <label htmlFor='degree'>DEGREE EDIT</label> */}
+                    <input 
+                        
+                        value={this.state.newCard.degree}
+                        onChange={this.handleChange}
+
+                        type='text'
+                        name='degree'
+                        placeholder='Edit Degree'
+                        required
+                    />
+                </div>
+
+                <div className='form-section h'>
                     {/* <label htmlFor='year-to'>To</label> */}
                     <input 
                         onChange={this.handleChange}
