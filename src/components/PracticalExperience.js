@@ -189,7 +189,6 @@ class PracticalExperience extends Component {
                         min='1940'
                         max='2100'
                         step='1'
-                        id='year-from'
                         placeholder='YYYY'
                         required
                     />
@@ -208,7 +207,6 @@ class PracticalExperience extends Component {
                         //max='2100'
                         //step='1'
                         maxLength='7'
-                        id='year-to'
                         placeholder='YYYY or Present'
                         required
                     />

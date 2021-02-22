@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
 
+body {
+    background: #9ba4ac;
+}
+
 #root {
-    background: teal;
     font-family: 'Roboto', sans-serif;
-    color: rgb(30, 30, 30);
+    color: var(--font-color);
+    --font-color: rgb(30, 30, 30);
+    --dark-grey: #a9a9a9;
+    --corner-radius: 1em;
 }
 
 h1 {
@@ -49,8 +55,8 @@ p {
 }
 
 .section-header {
-    border-top: 2px solid darkgray;
-    border-bottom: 2px solid darkgray;
+    border-top: 2px solid var(--dark-grey);
+    border-bottom: 2px solid var(--dark-grey);
     margin-bottom: 1rem;
 }
 
@@ -69,19 +75,83 @@ p {
     cursor: pointer;
 }
 
-/* INLINE EDITOR - PERSONAL INFO SECTION */
-
-.editableLabel{
-    border: 1px solid black;
+.container.education {
+    padding-top: .5em;
 }
 
-.editableLabel.label {
+.container.practical-exp {
+    border-bottom-right-radius: var(--corner-radius);
+    border-bottom-left-radius: var(--corner-radius);
+}
+
+/*PERSONAL INFO W/ INLINE EDITOR*/
+.container.personal {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 2rem 1rem 0rem 1rem;
+    border-top-right-radius: var(--corner-radius);
+    border-top-left-radius: var(--corner-radius);
+}
+
+.personal-name {
+    max-width: 60%;
+}
+
+.personal-info {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    max-width: 40%;
+}
+
+    /* INLINE EDITOR - PERSONAL INFO SECTION */
+    .editable-label{
+        font-size: 2.5em;
+        letter-spacing: 1px;
+        font-weight: 600;
+        color: var(--font-color);
+        border: none;
+        outline: none;
+    }
+
+    .editable-label.label {
+
+    }
+
+    .editable-label.input:focus {
+        border: 1px solid var(--dark-grey);
+        padding: .1rem .3rem;
+        max-width: 95%;
+    }
+
+    /* INLINE EDITOR - PERSONAL INFO SECTION */
+
+
+    div.personal-info div {
+        margin: .1rem 0;
+    }
+
+    .editable-info{
+        font-size: .8em;
+        letter-spacing: .5px;
+        font-weight: 400;
+        color: #3e3e3e;
+        border: none;
+        outline: none;
+    }
     
-}
-
-.editableLabel.input {
-    border: 1px solid pink;
-}
+    .editable-info.info {
+    
+    }
+    
+    .editable-info.info-input:focus {
+        border: 1px solid var(--dark-grey);
+        padding: .1rem .3rem;
+        text-align: right;
+        max-width: 95%;
+    }
 
 /* FORM CONTROLS */
 
@@ -94,7 +164,7 @@ label {
 
 input,textarea {
     padding: .5em;
-    border: 1px solid darkgrey;
+    border: 1px solid var(--dark-grey);
     border-radius: 4px;
     /*background: #f0f2f6; 
     border: none;*/

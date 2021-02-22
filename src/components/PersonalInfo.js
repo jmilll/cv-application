@@ -23,22 +23,83 @@ class PersonalInfo extends Component {
 
     render() {
         return(
-            <div className='container personal-info'>
-                Personal Info
-                <EditableLabel text='Hello!'
-                labelClassName='editableLabel label'
-                inputClassName='editableLabel input'
-                inputWidth='200px'
-                inputHeight='25px'
-                inputMaxLength='50'
-                labelFontWeight='bold'
-                inputFontWeight='bold'
-                onFocus={this._handleFocus}
-                onFocusOut={this._handleFocusOut}
-            />
+            <div className='container personal'>
+
+                <div className='personal-name'>
+                    <EditableLabel 
+                    text='First Name'
+                    labelClassName='editable-label label'
+                    inputClassName='editable-label input'
+                    // inputWidth='200px'
+                    // inputHeight='25px'
+                    // inputMaxLength='50'
+                    // labelFontWeight='bold'
+                    // inputFontWeight='bold'
+                    onFocus={this._handleFocus}
+                    onFocusOut={this._handleFocusOut}
+                    ></EditableLabel>
+
+                    <EditableLabel 
+                    text='Last Name'
+                    labelClassName='editable-label label'
+                    inputClassName='editable-label input'
+                    // inputWidth='200px'
+                    // inputHeight='25px'
+                    // inputMaxLength='50'
+                    // labelFontWeight='bold'
+                    // inputFontWeight='bold'
+                    onFocus={this._handleFocus}
+                    onFocusOut={this._handleFocusOut}
+                    ></EditableLabel>
+                </div>
+                
+                <div className='personal-info'>
+
+                    <EditableLabel 
+                        text='123.456.7899'
+                        labelClassName='editable-info info'
+                        inputClassName='editable-info info-input'
+                        // inputWidth='200px'
+                        // inputHeight='25px'
+                        // inputMaxLength='50'
+                        // labelFontWeight='bold'
+                        // inputFontWeight='bold'
+                        onFocus={this._handleFocus}
+                        onFocusOut={this._handleFocusOut}
+                        ></EditableLabel>
+
+                    <EditableLabel 
+                        text='yourEmail@gmail.com'
+                        labelClassName='editable-info info'
+                        inputClassName='editable-info info-input'
+                        // inputWidth='200px'
+                        // inputHeight='25px'
+                        // inputMaxLength='50'
+                        // labelFontWeight='bold'
+                        // inputFontWeight='bold'
+                        onFocus={this._handleFocus}
+                        onFocusOut={this._handleFocusOut}
+                        ></EditableLabel>
+                    <EditableLabel 
+                        text='portfolio.com'
+                        labelClassName='editable-info info'
+                        inputClassName='editable-info info-input'
+                        // inputWidth='200px'
+                        // inputHeight='25px'
+                        // inputMaxLength='50'
+                        // labelFontWeight='bold'
+                        // inputFontWeight='bold'
+                        onFocus={this._handleFocus}
+                        onFocusOut={this._handleFocusOut}
+                        ></EditableLabel>
+                </div>
+            
             </div>
         )
     }
 }
 
 export default PersonalInfo
+
+//<label class='editable-label label' type='text' value='Hello'>Hello</label>
+//<input class='editable-label input' type='text' value='Hello'></input>
