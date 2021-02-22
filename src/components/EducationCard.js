@@ -1,11 +1,9 @@
-import uniqid from "uniqid";
 import React, { Component } from 'react'
 
 class EducationCard extends Component {
     constructor(props) {
         super(props)
-        this.testFunction = props.testFunction.bind(this)
-        //this.editCard = props.editCard.bind(this)
+        
         this.deleteCard = props.deleteCard.bind(this)
         
         this.state = {
@@ -29,10 +27,6 @@ class EducationCard extends Component {
     }
 
     handleChange = (e) => {
-        //changes DOM directly
-        // this.setState({
-        //     newCard: {school: e.target.value}
-        // })
 
         const {name, value} = e.target 
         this.setState({
@@ -86,7 +80,6 @@ class EducationCard extends Component {
 
             <form className={activeEditForm} onSubmit={this.onSubmitTask}>
                 <div className='form-section h'>
-                    {/* <label htmlFor='school'>SCHOOL EDIT</label> */}
                     <input 
                         
                         value={this.state.newCard.school}
@@ -100,7 +93,6 @@ class EducationCard extends Component {
                 </div>
 
                 <div className='form-section h'>
-                    {/* <label htmlFor='year-from'>From</label> */}
                     <input 
                         onChange={this.handleChange}
                         value={this.state.newCard.from}
@@ -116,7 +108,6 @@ class EducationCard extends Component {
                 </div>
 
                 <div className='form-section h'>
-                    {/* <label htmlFor='degree'>DEGREE EDIT</label> */}
                     <input 
                         
                         value={this.state.newCard.degree}
@@ -130,7 +121,6 @@ class EducationCard extends Component {
                 </div>
 
                 <div className='form-section h'>
-                    {/* <label htmlFor='year-to'>To</label> */}
                     <input 
                         onChange={this.handleChange}
                         value={this.state.newCard.to}
@@ -146,7 +136,6 @@ class EducationCard extends Component {
                 </div>
 
                 <div className='form-section'>
-                    {/* <label htmlFor='degree-input'>Additional</label> */}
                     <textarea 
                         onChange={this.handleChange}
                         value={this.state.newCard.additional}
@@ -157,11 +146,8 @@ class EducationCard extends Component {
                     />
                 </div>
 
-
-
-
-
                 <button className='btn save' type='submit' onClick={() => this.toggleEditForm()}>Save Edit</button>
+            
             </form>
         </section>
         )

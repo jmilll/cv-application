@@ -34,17 +34,11 @@ class FormEducation extends Component {
     onSubmitTask = (e) => {
         e.preventDefault();
 
-        // alert(`
-        //     ${this.state.eduObject.school} ${this.state.eduObject.degree}
-        // `)
-
         this.setState({
             cards: this.state.cards.concat(this.state.eduObject), 
-            //eduObject: {school: 'value'}
             
         });
 
-        //this.toggleForm()
         this.resetForm()
         console.log('submited')
     }
@@ -79,29 +73,6 @@ class FormEducation extends Component {
         })
     }
 
-    // editCard = (cardId) => {
-    //     console.log('edit-card')
-    //     const findCard = this.state.cards.filter(card => {
-    //         return card.id === cardId
-    //     })
-    //     console.log(findCard)
-    //     console.log(Object.findCard.school)
-    //     const changeCard = console.log(findCard.school)
-    //     // this.setState({
-    //     //     eduObject: {
-                
-    //     //         school: findCard.school,
-    //     //         degree: findCard.degree,
-    //     //         from: findCard.from,
-    //     //         to: findCard.to,
-    //     //         additional: findCard.additional,
-    //     //     }
-    //     // })
-    // }
-
-
-
-
     deleteCard = (uid) => {
         console.log('delete-card')
         const remainingCards = this.state.cards.filter(card => {
@@ -110,11 +81,6 @@ class FormEducation extends Component {
         this.setState({
             cards: remainingCards
         })
-    }
-
-
-    testFunction = () => {
-        console.log('test')
     }
 
 
@@ -129,10 +95,7 @@ class FormEducation extends Component {
                     key={card.id}
                     section='education'
                     card={card}
-                    //editCard={this.editCard}
                     deleteCard={this.deleteCard}
-
-                    testFunction={this.testFunction}
                     />
         })
 
@@ -144,7 +107,6 @@ class FormEducation extends Component {
             {renderCard}
 
             <form className={activeForm} onSubmit={this.onSubmitTask}>
-                {/*onSubmit={this.onSubmitTask}*/}
 
                 <div className='form-section h'>
                     <label htmlFor='school'>School</label>
