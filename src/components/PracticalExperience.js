@@ -36,19 +36,11 @@ class PracticalExperience extends Component {
     onSubmitTask = (e) => {
         e.preventDefault();
 
-        // alert(`
-        //     ${this.state.expObject.company} ${this.state.expObject.title}
-        // `)
-
         this.setState({
-            cards: this.state.cards.concat(this.state.expObject), 
-            //expObject: {company: 'value'}
-            
+            cards: this.state.cards.concat(this.state.expObject),
         });
 
-        //this.toggleForm()
         this.resetForm()
-        console.log('submited')
     }
 
 
@@ -56,7 +48,7 @@ class PracticalExperience extends Component {
         this.setState({
             expObject: {company: e.target.value}
         })
-        console.log(this.state.expObject)
+        //console.log(this.state.expObject)
     }
 
 
@@ -100,12 +92,10 @@ class PracticalExperience extends Component {
         const activeBtn = this.state.activeBtn ? 'btn add-exp' : 'btn add-exp hidden';
 
         const renderCard = this.state.cards.map((card) => {
-            //console.log('rendercard')
             return <PracticalExperienceCard 
                     key={card.id}
                     section='practical exp'
                     card={card}
-                    //editCard={this.editCard}
                     deleteCard={this.deleteCard}
 
                     />
@@ -124,7 +114,6 @@ class PracticalExperience extends Component {
                 <div className='form-section h'>
                     <label htmlFor='company'>Company</label>
                     <input 
-                        
                         value={this.state.expObject.company}
                         onChange={this.handleChange}
 
@@ -138,7 +127,6 @@ class PracticalExperience extends Component {
                 <div className='form-section hh'>
                     <label htmlFor='city'>City</label>
                     <input 
-                        
                         value={this.state.expObject.city}
                         onChange={this.handleChange}
 
@@ -152,7 +140,6 @@ class PracticalExperience extends Component {
                 <div className='form-section hh'>
                     <label htmlFor='state'>State</label>
                     <input 
-                        
                         value={this.state.expObject.state}
                         onChange={this.handleChange}
 
@@ -182,8 +169,6 @@ class PracticalExperience extends Component {
                     <input 
                         onChange={this.handleChange}
                         value={this.state.expObject.from}
-
-                        //type="month"
                         type='number'
                         name='from'
                         min='1940'
@@ -199,13 +184,8 @@ class PracticalExperience extends Component {
                     <input 
                         onChange={this.handleChange}
                         value={this.state.expObject.to}
-
-                        //type="month"
                         type='text'
                         name='to'
-                        //min='1940'
-                        //max='2100'
-                        //step='1'
                         maxLength='7'
                         placeholder='YYYY or Present'
                         required
@@ -217,7 +197,6 @@ class PracticalExperience extends Component {
                     <textarea 
                         onChange={this.handleChange}
                         value={this.state.expObject.additional}
-
                         type='text'
                         name='additional'
                         id='company-add'
