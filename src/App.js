@@ -7,6 +7,7 @@ import FormEducation3 from './components/FormEducation3'
 import './normalize.css';
 import './App.css';
 import PracticalExperience from "./components/PracticalExperience";
+import PersonalInfo from "./components/PersonalInfo";
 
 class App extends Component {
   constructor(props) {
@@ -53,6 +54,8 @@ class App extends Component {
       <div className='App'>
         <ClassClick />
         
+        <PersonalInfo />
+
         <Education />
         {/* <FormEducation3 /> */}
 
