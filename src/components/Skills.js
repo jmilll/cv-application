@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SectionHeader from './SectionHeader';
-import Overview from './Overview';
+import SkillsItem from './SkillsItem';
 
 class Skills extends Component {
     constructor(props) {
@@ -14,7 +14,7 @@ class Skills extends Component {
   
     handleChange = (e) => {
       
-      console.log(e.target.value)
+      //console.log(e.target.value)
   
       this.setState({
         task: e.target.value,
@@ -24,14 +24,11 @@ class Skills extends Component {
     onSubmitTask = (e) => {
       e.preventDefault();
   
-      //console.log("before " + this.state.task)
-  
       this.setState({
         tasks: this.state.tasks.concat(this.state.task), 
         task: "",
       });
-  
-      //console.log("after " + this.state.task)
+
     }
 
 
@@ -43,20 +40,22 @@ class Skills extends Component {
 
                 <SectionHeader name='Sofware Knowledge + Skills'/>
                 
-                <form onSubmit={this.onSubmitTask}>
+                <form className='form-skills' onSubmit={this.onSubmitTask}>
                 {/* <label htmlFor="taskInput">Enter Skill</label> */}
 
-                <input 
-                    onChange={this.handleChange}
-                    value={this.state.task}
-                    type="text" 
-                    id="taskInput" 
-                    placeholder= 'Team Player'
-                />
+                    <input 
+                        onChange={this.handleChange}
+                        value={this.state.task}
+                        type="text" 
+                        id="taskInput" 
+                        placeholder= 'JavaScript'
+                    />
 
-                <button className='btn' type="submit">Add Skill</button>
+                    <button className='btn add-skill' type="submit">Add Skill</button>
                 </form>
-                <Overview tasks={tasks} />
+
+                <SkillsItem tasks={tasks} />
+
             </div>
         )
     }

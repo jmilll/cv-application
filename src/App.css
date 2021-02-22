@@ -82,6 +82,13 @@ p {
     cursor: pointer;
 }
 
+.btn.add-skill {
+    margin-left: 1rem;
+    padding: .7em .8em;
+}
+
+
+
 .container.education {
     padding-top: .5em;
 }

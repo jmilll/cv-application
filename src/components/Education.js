@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 import uniqid from "uniqid";
 import SectionHeader from './SectionHeader';
 import SectionFooter from './SectionFooter';
-import CardItem from './CardItem'
-import CardEditForm from './CardEditForm';
-import CardItem2 from './CardItem2'
 import EducationCard from './EducationCard';
 
 class FormEducation extends Component {

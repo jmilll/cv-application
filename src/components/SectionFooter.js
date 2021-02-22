@@ -5,7 +5,7 @@ const SectionFooter = (props) => {
     const { activeBtn, toggleForm } = props;
 
     function addClick() {
-        console.log('add + open form')
+        //console.log('add + open form')
         toggleForm()
     };
 
