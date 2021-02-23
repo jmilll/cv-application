@@ -16,7 +16,7 @@ Not very polished from a visual standpoint, but the functionality is there. Buil
 ![Filled](assets/filled.png)
 
 ###  Editing a section
-![Edit](edit-inline.png)
+![Edit](assets/edit-inline.png)
 
 [Check it](https://jmilll.github.io/cv-application/)
 
