@@ -41,8 +41,24 @@ p {
     margin: 0;
 }
 
+ul {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+li:after { 
+    content: '/'; 
+    margin: 1em;
+    padding: 0;
+} 
+
 .App {
-    margin: 2rem;
+    margin: 2rem 4rem;
 }
 
 .hidden {
