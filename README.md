@@ -9,14 +9,14 @@ Not very polished from a visual standpoint, but the functionality is there. Buil
 ### Home before adding
 ![Desktop](assets/home.png)
 
-###  Adding education
+###  Add Form
 ![Add](assets/add.png)
 
 ###  Filled out
 ![Filled](assets/filled.png)
 
 ###  Editing a section
-![Edit](edit-inline)
+![Edit](edit-inline.png)
 
 [Check it](https://jmilll.github.io/cv-application/)
 
@@ -34,7 +34,7 @@ The purpose of this project was to learn and use React.
 
 ## Technologies Used
 
-* Webpack
+* React
 * JavaScript
 * HTML / CSS
 * Flexbox
